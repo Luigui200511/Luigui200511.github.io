@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #67676b 0%, #d11609 100%);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+#escudo {
+    position: absolute;
+    top: 60px;
+    left: 400px;
+    width: 300px;
+    height: center;
+    margin-bottom: 10px;
+
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.piano-contenedor {
+    position: relative; /* Para que las teclas negras se alineen sobre las blancas */
+    display: flex; /* Alinea las teclas en fila */
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    width: 1000px; /* Ajustamos el ancho del piano */
+    height: 300px;
+}
+
+.tecla {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tecla.blanca {
+    width: 60px;
+    height: 300px;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.tecla.negra {
+    width: 40px;
+    height: 200px;
+    background-color: #333;
+    z-index: 2;
+    position: absolute;
+    margin-left: 15px; /* Para que se superponga en el centro de dos teclas blancas */
+    margin-top: 1px;
+}
+
+/* Posicionamiento específico de cada tecla negra */
+.tecla[data-tecla="DO#"] {
+    left: 25px;
+}
+.tecla[data-tecla="RE#"] {
+    left: 85px;
+}
+
+.tecla[data-tecla="FA#"] {
+    left: 205px;
+}
+
+.tecla[data-tecla="SOL#"] {
+    left: 265px;
+}
+
+.tecla[data-tecla="LA#"] {
+    left: 325px;
+}
+
+.tecla:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.piano .tecla.negra:active {
+    background-color: #444;
+}
+.tecla::before {
+    content: attr(data-tecla); /* Muestra la nota de cada tecla */
+    position: absolute;
+    top: 250px; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: black; /* Color del texto */
+}
+.tecla.negra::before {
+    color: white; /* El texto de las teclas negras debe ser blanco para contrastar */
+    top: 70px;
+    font-size: 15px;
+}
+
+.contenedor-imagenes {
+    position: absolute; /* Contenedor relativo, para que las imágenes se muevan dentro de este */
+    width: 100%; /* Ancho del contenedor */
+    height: 100vh; /* Alto completo de la ventana */
+}
+
+.imagen {
+    position: absolute; /* Permite mover las imágenes libremente */
+    height: auto;
+}
+
+.imagen.izquierda {
+    top: -300px; /* Mueve la imagen 50px desde la parte superior */
+    left: -500px;/* Mueve la imagen 30px desde la izquierda */
+    width: 700px;
+  
+}
+
+.imagen.derecha {
+    top: -560px; /* Mueve la imagen 100px desde la parte superior */
+    width: 380px;
+    right: 300px; /* Mueve la imagen 50px desde la derecha */
+}
+.imagen.decora {
+    top: -550px; /* Mueve la imagen 50px desde la parte superior */
+    left: -420px;/* Mueve la imagen 30px desde la izquierda */
+    width: 600px;
+  
+}    
+.imagen.musica{
+    top: -350px; /* Mueve la imagen 100px desde la parte superior */
+    width: 400px;
+    right: 250px; /* Mueve la imagen 50px desde la derecha */
+
+}
+h1{
+    color: #0c0e0c;
+}

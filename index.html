@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="escudo" src="img/escudo.png" alt="Escudo UNMSM">
+            <h1>Simulador de Piano</h1>
+        </header>
+
+        <div class="piano-contenedor">
+            <div class="tecla blanca" data-tecla="DO"></div>
+            <div class="tecla negra"  data-tecla="DO#"></div>
+            <div class="tecla blanca" data-tecla="RE"></div>
+            <div class="tecla negra"  data-tecla="RE#"></div>
+            <div class="tecla blanca" data-tecla="MI"></div>
+            <div class="tecla blanca" data-tecla="FA"></div>
+            <div class="tecla negra"  data-tecla="FA#"></div>
+            <div class="tecla blanca" data-tecla="SOL"></div>
+            <div class="tecla negra"  data-tecla="SOL#"></div>
+            <div class="tecla blanca" data-tecla="LA"></div>
+            <div class="tecla negra"  data-tecla="LA#"></div>
+            <div class="tecla blanca" data-tecla="SI"></div>
+        </div>
+
+        <div class="contenedor-imagenes">
+            <img src="img/decoracion.png" alt="Imagen izquierda" class="imagen izquierda">
+            <img src="img/de.png" alt="Imagen derecha" class="imagen derecha"> 
+            <img src="img/decora.png" alt="Imagen decora" class="imagen decora">
+            <img src="img/musica.png" alt="Imagen musica" class="imagen musica">
+        </div>
+        <!-- Archivos de sonido -->
+        <audio data-sound="DO" src="sounds/DO.mp3"></audio>
+        <audio data-sound="DO#" src="sounds/D.mp3"></audio>
+        <audio data-sound="RE" src="sounds/RE.mp3"></audio>
+        <audio data-sound="RE#" src="sounds/R.mp3"></audio>
+        <audio data-sound="MI" src="sounds/MI.mp3"></audio>
+        <audio data-sound="FA" src="sounds/FA.mp3"></audio>
+        <audio data-sound="FA#" src="sounds/F.mp3"></audio>
+        <audio data-sound="SOL" src="sounds/SOL.mp3"></audio>
+        <audio data-sound="SOL#" src="sounds/S.mp3"></audio>
+        <audio data-sound="LA" src="sounds/LA.mp3"></audio>
+        <audio data-sound="LA#" src="sounds/L.mp3"></audio>
+        <audio data-sound="SI" src="sounds/SI.mp3"></audio>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
